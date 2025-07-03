@@ -306,11 +306,6 @@
           checkbox.addEventListener('change', () => {
             checkboxes.forEach(cb => cb.checked = cb === checkbox);
             costoEnvio = checkbox.id === 'Envio-1' ? 0 : checkbox.id === 'Envio-2' ? 15 : 8;
-            /*if (checkbox.id === 'Envio-2') {
-                costoEnvio = 15;
-            } else {
-                costoEnvio = 8;
-            }*/
             const subtotal = parseFloat(
               document.querySelector('#cart-items tr.subtotal-row td:last-child p')
                 .textContent.replace('S/ ', '')
